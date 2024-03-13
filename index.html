@@ -75,8 +75,25 @@
               <a href="">project page</a> / 
               <a href="">arXiv</a>
               <p></p>
-              <p>.</p>
 	</td>
+
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr onmouseout="db3d_stop()" onmouseover="db3d_start()">
+   <td style="padding:20px;width:25%;vertical-align:middle">
+               <div class="one">
+                <img src="images/main.jpeg" alt="b3do" width="180" style="border-style: none">
+              </div>
+              <script type="text/javascript">
+                function db3d_start() {
+                  document.getElementById('db3d_image').style.opacity = "1";
+                }
+
+                function db3d_stop() {
+                  document.getElementById('db3d_image').style.opacity = "0";
+                }
+                db3d_stop()
+              </script>
+            </td>
 	<td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/pdf/2401.10526.pdf">
                 <span class="papertitle">On mitigating stability-plasticity dilemma in CLIP-guided image morphing
