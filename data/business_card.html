@@ -34,6 +34,7 @@
     font-family: 'DM Mono', monospace;
     padding: 48px 24px;
     gap: 36px;
+    overflow-x: hidden;
   }
 
   /* ══ Card scene ══ */
@@ -44,7 +45,6 @@
     cursor: pointer;
     transition: transform 0.25s ease;
     filter: drop-shadow(0 6px 24px rgba(28,26,23,0.18)) drop-shadow(0 2px 6px rgba(28,26,23,0.10));
-    zoom: 1.35;
   }
   .card-scene:hover {
     transform: translateY(-4px);
@@ -448,6 +448,25 @@
 </div>
 
 <div class="flip-hint">↻ &nbsp; click to flip &nbsp; ↻</div>
+
+<script>
+  const CARD_NATURAL_WIDTH = 520;
+  const MAX_ZOOM = 1.35;
+  const H_PADDING = 48; // 24px * 2 (body padding)
+
+  function scaleCard() {
+    const card = document.getElementById('card');
+    const available = window.innerWidth - H_PADDING;
+    const zoom = Math.min(MAX_ZOOM, available / CARD_NATURAL_WIDTH);
+    card.style.zoom = zoom;
+  }
+
+  scaleCard();
+  window.addEventListener('resize', scaleCard);
+  window.addEventListener('orientationchange', function () {
+    setTimeout(scaleCard, 100); // orientationchange fires before resize completes
+  });
+</script>
 
 </body>
 </html>
