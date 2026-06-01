@@ -45,14 +45,18 @@
       <ul class="news-list">
         <li><span class="date">[2026/05]</span> I was recognized as a Gold Reviewer for <b>ICML 2026</b></li>
         <li><span class="date">[2026/05]</span> One paper got accepted to <b>ICML 2026</b> Conference!</li>
-        <li><span class="date">[2025/12]</span> I was selected as a WINNER in Qualcomm Innovation Fellowship Korea (QIFK) 2025 <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship/winners" target="_blank" rel="noopener noreferrer"><b>(Link)</b></a></li>        <li><span class="date">[2025/11]</span> Two papers got accepted to <b>WACV 2026</b> Conference!</li>
+        <li><span class="date">[2025/12]</span> I was selected as a WINNER in Qualcomm Innovation Fellowship Korea (QIFK) 2025 <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship/winners" target="_blank" rel="noopener noreferrer"><b>(Link)</b></a></li>
+        <li><span class="date">[2025/11]</span> Two papers got accepted to <b>WACV 2026</b> Conference!</li>
         <li><span class="date">[2025/09]</span> One paper got accepted to <b>NeurIPS 2025</b> Conference!</li>
+      </ul>
+      <ul class="news-list news-hidden" id="news-more" style="display: none;">
         <li><span class="date">[2024/11]</span> One paper got accepted to <b>IJCV 2024</b> Journal!</li>
         <li><span class="date">[2024/07]</span> One paper got accepted to <b>BMVC 2024</b> Conference!</li>
         <li><span class="date">[2024/07]</span> One paper got accepted to <b>ECCV 2024</b> Conference!</li>
       </ul>
+      <button id="news-toggle" onclick="(function(){var m=document.getElementById('news-more');var b=document.getElementById('news-toggle');var hidden=m.style.display==='none';m.style.display=hidden?'':'none';b.textContent=hidden?'Show less':'Show more';})()" style="background:none;border:none;padding:4px 0;margin-top:4px;cursor:pointer;font-family:inherit;font-size:0.9em;color:#888;text-decoration:underline;">Show more</button>
     </section>
-
+    
     <section class="section publications">
       <h2 class="section-title">Publications</h2>
       
